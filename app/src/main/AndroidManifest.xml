@@ -18,7 +18,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.NonStickyService" />
+        <service
+            android:name=".service.NonStickyService"
+            android:process=":single" />
         <service android:name=".service.StickyService" />
         <service android:name=".service.ApplicationBoundedService" />
         <service android:name=".service.BlankService" />
