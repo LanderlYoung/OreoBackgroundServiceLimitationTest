@@ -32,6 +32,11 @@ abstract class LifeCycleService : Service() {
         return null
     }
 
+    override fun onUnbind(intent: Intent?): Boolean {
+        Log.i(tag, "onUnbind($intent)")
+        return super.onUnbind(intent)
+    }
+
     open override fun onDestroy() {
         Log.i(tag, "onDestroy()")
         super.onDestroy()
